@@ -1,5 +1,5 @@
 # MatlabRunningServer
-Example for a server in python running Matlab functions
+Example for a server in python running Matlab functions using command line
 
 
 Requires: flask (pip install flask)
