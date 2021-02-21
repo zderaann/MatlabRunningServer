@@ -2,7 +2,7 @@
 Example for a server in python running Matlab functions using command line
 
 
-Requires: flask (pip install flask)
+Requires: flask (pip install flask), pyopenssl (pip install pyopenssl)
 
 
 Server is located in matlap_server.py and an example sending a POST request is in matlab_test.py.The tested Matlab function is located in test.m. Change the URL in the matlab_test file to the IP running on your server.
