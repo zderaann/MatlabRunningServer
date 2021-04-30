@@ -14,5 +14,7 @@ Run example: python matlab_server.py  --matlab_path "C:/Program^ Files/MATLAB/R2
 Run test example in python: python matlab_test.py
 
 Run test example in C++ (using g++): g++ -ggdb -g -c VS_test.cpp -o VS_test.o
+
                                      g++ -ggdb -g -o VS_test VS_test.o -lm -lcurl
+                                     
                                      ./VS_test
