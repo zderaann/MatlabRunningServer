@@ -6,6 +6,7 @@ Requires: flask (pip install flask), libcurl for C++ example (https://curl.se/li
 
 
 Server is located in matlap_server.py and an example sending a POST request is in matlab_test.py.The tested Matlab function is located in test.m. Change the URL in the matlab_test file to the IP running on your server.
+Change the MATLAB call depending on the system the server will be running on (commented section FOR LINUX and FOR WINDOWS).
 
 
 Run example: 
