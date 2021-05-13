@@ -30,7 +30,11 @@ def api_matlab_run_cmd():
         a = int(request.form['a'])
         b = int(request.form['b'])
         print('Running ' + MATLAB_FUNCTION + '(' + str(a) + ',' + str(b) + ')')
-        answer = os.popen( MATLAB_PATH +  ' -sd ' + MATLAB_SCRIPT_FOLDER + ' -batch ' + MATLAB_FUNCTION + '(' + str(a) + ',' + str(b) + ')').read()
+        # FOR WINDOWS
+        #answer = os.popen( MATLAB_PATH +  ' -sd ' + MATLAB_SCRIPT_FOLDER + ' -batch ' + MATLAB_FUNCTION + '(' + str(a) + ',' + str(b) + ')').read()
+
+        # FOR LINUX
+        answer = os.popen( MATLAB_PATH +  ' -nodisplay -batch "cd(\'' + MATLAB_SCRIPT_FOLDER + '\');' + MATLAB_FUNCTION + '(' + str(a) + ',' + str(b) + ')' + '"').read()
         print('Sending Matlab answer: ' + answer)
         response_list = [("matlab_answer", answer)]
 
@@ -70,6 +74,6 @@ if __name__ == "__main__":
     MATLAB_FUNCTION = args.matlab_function
 
     IP = socket.gethostbyname(socket.gethostname())
-    app.run(port=9099, host=IP)
+    app.run(port = 9099, host = IP)
 
 
