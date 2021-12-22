@@ -25,3 +25,9 @@ Run test example in C++ (using g++):
                                      g++ -ggdb -g -o VS_test VS_test.o -lm -lcurl
                                      
                                      ./VS_test
+
+# Running InLoc demo on mServer
+To run SPRING InLoc demo on mServer, run the run_inloc_demo.py script. This script requires image path as a an argument.
+Example:
+                            python run_inloc_demo.py /local/imgs/img1.jpg
+                            
